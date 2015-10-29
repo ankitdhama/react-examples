@@ -16,16 +16,16 @@
         var MyComponent = React.createClass({
             render: function() {
                 return ( 
-                    <h1 className = "heading">Hello world</h1>
+                    <h1 className = "heading">{this.props.dataId} My name is {this.props.username}</h1>
                 );
             }
         });
       
         ReactDOM.render(
           <div>
-            <MyComponent />
-            <MyComponent />
-            <MyComponent />
+            <MyComponent dataId="1" username="ankit"  />
+            <MyComponent dataId="2" username="sourabh" />
+            <MyComponent dataId="3" username="arun" />
           </div>,
           document.getElementById('content')
         );
